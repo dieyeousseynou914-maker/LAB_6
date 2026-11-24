@@ -1,15 +1,7 @@
-chaine = input("Veuillez entrer une chaine!")
-Nb_lettre = 0
-Nb_chiffre = 0
-Nb_space = 0
-for i in range(len(chaine)):
-    if chaine[i].isalpha():
-        Nb_lettre += 1
-    elif chaine[i].isdigit():
-        Nb_chiffre += 1
-    elif chaine[i].isspace():
-        Nb_space += 1
+phrase = input("Veuillez entrer une phrase!\n")
+plus_long = ""
+for mot in phrase.split():
+    if len(mot) > len(plus_long):
+        plus_long = mot
 
-print(f"""Le nombre de lettre dans la chaine est: {Nb_lettre}
-        Le nombre de chiffre dans a chaine est: {Nb_chiffre} 
-        et le nombre d'espaces dans la chaine est: {Nb_space}""")
+print(f"Le plus long mot de la phrase est: {plus_long}")
